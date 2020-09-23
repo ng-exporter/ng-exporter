@@ -1,0 +1,24 @@
+﻿'findReplaceInFiles:' option can find and replace on multiple lines
+but the rest, you can separate by '~' if you don't wish to put on multiples lines
+==================================================================================
+
+sourceFolder				      :	D:\COMPANIES\HARD-AUTH\hard\fresh\fresh
+detinationFolder			    :	D:\COMPANIES\HARD-AUTH\hard\fresh\fresh-export
+deleteDestinationFirst		:	true
+openDestinationAfterCopy	:	true
+modulesFolder				      : \modules\
+modulesToExtract			    :	forgot-password
+							            : login
+							            : forgot-password-confirmation
+supportedFileTypes			  :	.ts
+							            : .js
+							            :	.html
+findReplaceFiles	        :	environment.prod.ts`environment.ts
+ignore                    :	\bin\
+							            : \.git\
+							            : \obj\
+							            : \packages\
+							            : \node_modules\
+findReplaceInFiles			  :	[sam]`//[boo]
+							            :	//fffffffffffffff
+							            :	//bbbbbbbbb
