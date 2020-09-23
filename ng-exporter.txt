@@ -1,0 +1,7 @@
+﻿deldst,
+D:\COMPANIES\HARD-AUTH\hard\fresh\fresh,
+D:\COMPANIES\HARD-AUTH\hard\fresh\fresh-export,
+forgot-password~login~forgot-password-confirmation,
+[sam]`[boo]~[sam1]`[boo1],
+.ts~.js~.html,
+environment.prod.ts`environment.ts~
