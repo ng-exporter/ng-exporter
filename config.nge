@@ -1,8 +1,24 @@
-﻿'findReplaceInFiles:' option can find and replace on multiple lines
+﻿NOTES ( This a build tool that defines the content of a .nge file )
+=====
+( 
+This is like gulp-replace on steroids! But way easier!
+So you can even do things like replace strings in your files 
+with another string from the internet in a build process
+ )
+=====
+
+The first ':' on a line is a special operator , everything else are comments
+'findReplaceInFiles:' option can find and replace on multiple lines
 but the rest, you can separate by '~' if you don't wish to put on multiples lines
-the first ':' on a line is a special operator '::>>' lets you put multiple times on a line
+'::>>' lets you put multiple times on a line
 
 Inside files, you can use  <!--[nge:inject=views/account/login/login.html]--> to inject files
+or one of these variation
+  <!--[nge:inject-script=views/account/login/login.js]--> 
+  <!--[nge:inject-style=views/account/login/login.css]-->
+  <!--[nge:inject-script=https://code.jquery.com/jquery-3.5.1.min.js]-->  
+
+you can also inject from url , over the internet!
 
 Or intuitively these (also works inside js files)
 
@@ -15,6 +31,8 @@ delete from files
   <!--[nge:remove]-->
      <script src="assets/js/app.js"></script>
   <!--[/nge:remove]-->
+
+  use 'runAfter' and 'runAfter' to define executables that a pre and post build
 ==================================================================================
 
 configTarget:
@@ -69,4 +87,15 @@ findReplaceInFiles:
 
 inject:
 :<!--include-signup--> ==>> views/account/signup/signup.html
+
+runAfter:
+: npm install
+: gulp
+: 
+
+runBefore:
+: npm version
+: npm install
+: 
+:
 
