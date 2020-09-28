@@ -35,6 +35,10 @@ delete from files
   use 'runAfter' and 'runAfter' to define executables that a pre and post build
 ==================================================================================
 
+disable:false
+
+ignoreAll:false
+
 configTarget:
 : config.nge
 
