@@ -69,20 +69,14 @@ supportedFileTypes:
 : .js
 : .html
 
+ignoreCommon: true
+
+
 ignore:
-: \bin\
-: \.git\
-: \obj\
-: \packages\
-: \node_modules\
 : \.vscode\
 : package.json
 : package-lock.json
 : server.js
-: \assets\
-: gulpfile.js
-: .npmignore
-: .gitignore
 
 fileSubstitution:
 
@@ -98,8 +92,17 @@ runAfter:
 : 
 
 runBefore:
+: nge:download ==>> 1000000 ==>> https://github.com/ServeMeLlib/dev/releases/download/0.36.0/ServeMe.exe ==>> download
+: gulp
 : npm version
 : npm install
-: 
-:
 
+
+So you can specify the timeout for execution as a parameter
+: notepad ==>> 3000
+
+runBeforeAndContinue:
+: test.cmd
+
+runAfterAndContinue:
+: download/ServeMe.exe update
